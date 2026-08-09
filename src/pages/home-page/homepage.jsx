@@ -19,8 +19,8 @@ const Homepage = () => {
     'Main Course': [
       { name: 'Grilled Steak', price: 'Rs. 2500', badge: 'Chef Choice', img: '/images/Grilled Steak.jpg' },
       { name: 'Truffle Pasta', price: 'Rs. 2200', badge: 'Popular', img: '/images/Truffle Pasta.jpg' },
-      { name: 'Classic Burger', price: 'Rs. 1500', badge: 'Juicy', img: '/images/Classic Burger.jpg' },
-      { name: 'Grilled Chicken', price: 'Rs. 1800', badge: 'Spicy', img: '/images/Grilled Chicken.jpg' }
+      { name: 'Classic Burger', price: 'Rs. 1500', badge: 'Juicy', img: '/images/Classic-Burger.jpg' },
+      { name: 'Grilled Chicken', price: 'Rs. 1800', badge: 'Spicy', img: '/images/Grilled-Chicken.jpg' }
     ],
     Desserts: [
       { name: 'Chocolate Lava Cake', price: 'Rs. 850', badge: 'Sweet', img: '/images/Chocolate Lava Cake.jpg' },
