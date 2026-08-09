@@ -1,0 +1,149 @@
+.gallery-page-container {
+  background-color: #1a1410;
+  color: #f5f5f5;
+  min-height: 100vh;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Hero Section */
+.gallery-hero-section {
+  position: relative;
+  background: url('/images/img_1517248135467-4c7edcad34c4.jpg') center/cover no-repeat;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.gallery-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(26, 20, 16, 0.88);
+}
+
+.gallery-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.gallery-breadcrumb {
+  font-size: 14px;
+  color: #c5a059;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.gallery-hero-title {
+  font-size: 48px;
+  color: #c5a059;
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+/* Filter Buttons */
+.gallery-filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 40px 0 30px 0;
+  flex-wrap: wrap;
+}
+
+.gallery-filter-buttons button {
+  background-color: transparent;
+  border: 1px solid #c5a05944;
+  color: #f5f5f5;
+  padding: 8px 22px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.gallery-filter-buttons button:hover,
+.gallery-filter-buttons button.active {
+  background-color: #c5a059;
+  color: #1a1410;
+  border-color: #c5a059;
+  font-weight: 600;
+}
+
+/* Grid Layout */
+.gallery-grid-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 80px 20px;
+}
+
+.gallery-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Unique Shapes for Each Card Style */
+.gallery-card {
+  background-color: #241c16;
+  border: 1px solid #c5a05933;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+/* Har card ko mukhtalif aur pyari shape dene ke liye */
+.gallery-card:nth-child(odd) {
+  border-radius: 20px 4px 20px 4px; /* Stylish diagonal curve */
+}
+
+.gallery-card:nth-child(even) {
+  border-radius: 4px 20px 4px 20px; /* Opposite curve */
+}
+
+.gallery-card:nth-child(3n) {
+  border-radius: 16px; /* Smooth all rounded corners */
+}
+
+.gallery-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(197, 160, 89, 0.25);
+  border-color: #c5a059;
+}
+
+/* Image container with fixed proportions */
+.gallery-img-wrapper {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.gallery-card:hover .gallery-img-wrapper img {
+  transform: scale(1.1);
+}
+
+/* Card Content Style */
+.gallery-card-content {
+  padding: 16px 20px;
+  background-color: #241c16;
+}
+
+.gallery-category-tag {
+  font-size: 12px;
+  color: #c5a059;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.gallery-card-title {
+  font-size: 18px;
+  color: #f5f5f5;
+  margin-top: 4px;
+  font-family: 'Playfair Display', serif;
+}

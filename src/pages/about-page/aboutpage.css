@@ -1,0 +1,483 @@
+/* --- About Page Global Theme --- */
+.about-page-container {
+  background-color: #1a120e;
+  color: #f5f0eb;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* 1. Hero Banner */
+.about-hero {
+  position: relative;
+  height: 380px;
+  background: url('/images/img_1517248135467-4c7edcad34c4.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.about-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(26, 18, 14, 0.88);
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.about-breadcrumb {
+  font-size: 13px;
+  color: #d4af37;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.about-hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+.about-hero-subtitle {
+  color: #d0c0b0;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-top: 12px;
+}
+
+.explore-btn {
+  display: inline-block;
+  background-color: #d4af37;
+  color: #1a120e;
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: none;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);
+}
+
+.explore-btn:hover {
+  background-color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* --- Modernized Philosophy Section --- */
+.philosophy-section {
+  position: relative;
+  padding: 130px 8%;
+  background: linear-gradient(145deg, #241812 0%, #150e0a 100%);
+  overflow: hidden;
+}
+
+.philosophy-grid {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+
+.philosophy-text-col {
+  flex: 1;
+}
+
+/* Luxury Small Badge */
+.phil-badge {
+  display: inline-block;
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 18px;
+}
+
+.phil-badge span {
+  color: #d4af37;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.section-heading-gothic {
+  font-family: 'Playfair Display', serif;
+  font-size: 44px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 22px;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.philosophy-desc {
+  color: #c5b5a4;
+  font-size: 15px;
+  line-height: 1.85;
+  margin-bottom: 18px;
+  font-weight: 300;
+}
+
+.about-cta-btn {
+  margin-top: 15px;
+  background: linear-gradient(135deg, #d4af37 0%, #b89728 100%);
+  color: #1a120e;
+  padding: 15px 35px;
+  border: none;
+  border-radius: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.25);
+}
+
+.about-cta-btn:hover {
+  background: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.35);
+}
+
+/* Image Wrapper with Aesthetic Glow Effect */
+.philosophy-image-wrapper {
+  flex: 1.2;
+  position: relative;
+}
+
+.image-glow-backdrop {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  bottom: -15px;
+  left: -15px;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), transparent);
+  border-radius: 25px;
+  z-index: 1;
+  filter: blur(10px);
+}
+
+.philosophy-main-img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 600px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7);
+  transition: transform 0.4s ease;
+}
+
+.philosophy-main-img:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive adjustment */
+@media (max-width: 968px) {
+  .philosophy-grid {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .philosophy-main-img {
+    height: 320px;
+  }
+}
+
+/* --- Core Values Section with Background Image --- */
+.about-values-section {
+  position: relative;
+  padding: 110px 8%;
+  background: linear-gradient(rgba(26, 18, 14, 0.92), rgba(26, 18, 14, 0.92)), 
+              url('/images/img_1555396273-367ea4eb4db5.jpg') center/cover no-repeat;
+  text-align: center;
+}
+
+.values-header {
+  max-width: 700px;
+  margin: 0 auto 60px auto;
+}
+
+.values-subtext {
+  color: #d0c0b0;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-top: 15px;
+  font-weight: 300;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.value-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  padding: 40px 25px;
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-6px);
+  border-color: #d4af37;
+  background: rgba(212, 175, 55, 0.04);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.value-icon {
+  font-size: 36px;
+  margin-bottom: 20px;
+  display: inline-block;
+  background: rgba(212, 175, 55, 0.1);
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  border-radius: 50%;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.value-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.value-card p {
+  color: #d0c0b0;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 300;
+}
+
+/* --- Redesigned Hands Behind Section (No Image) --- */
+.hands-behind-section {
+  position: relative;
+  padding: 130px 8%;
+  background: radial-gradient(circle at center, #2b1f1a 0%, #1a120e 100%);
+  text-align: center;
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+  overflow: hidden;
+}
+
+.hands-behind-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+}
+
+.hands-content-wrapper {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.hands-badge {
+  display: inline-block;
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 6px 18px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+.hands-badge span {
+  color: #d4af37;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.hands-subtext {
+  color: #d0c0b0;
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 20px auto 40px auto;
+  font-weight: 300;
+  max-width: 700px;
+}
+
+/* Chef Highlight Stats Row */
+.chef-highlights-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 45px;
+}
+
+.chef-stat-box {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  padding: 25px 15px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.chef-stat-box:hover {
+  border-color: #d4af37;
+  transform: translateY(-4px);
+  background: rgba(212, 175, 55, 0.04);
+}
+
+.chef-stat-box h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  color: #d4af37;
+  margin-bottom: 5px;
+}
+
+.chef-stat-box p {
+  color: #b3c2b8;
+  font-size: 13px;
+  margin: 0;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+/* Gold Button Link */
+.inline-btn-gold {
+  display: inline-block;
+  color: #1a120e;
+  background-color: #d4af37;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 12px 30px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);
+}
+
+.inline-btn-gold:hover {
+  background-color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive for stat boxes */
+@media (max-width: 768px) {
+  .chef-highlights-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+/* --- Journey Timeline Section with Background Image --- */
+.journey-timeline-section {
+  position: relative;
+  padding: 110px 8%;
+  background: linear-gradient(rgba(26, 18, 14, 0.93), rgba(26, 18, 14, 0.93)), 
+              url('/images/img_1544025162-d76694265947.jpg') center/cover no-repeat;
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.journey-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.timeline-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  padding: 40px 25px;
+  border-radius: 16px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.timeline-card:hover {
+  transform: translateY(-6px);
+  border-color: #d4af37;
+  background: rgba(212, 175, 55, 0.04);
+}
+
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  background-color: #d4af37;
+  border-radius: 50%;
+  margin: 0 auto 20px auto;
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
+}
+
+.timeline-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: #d4af37;
+  margin-bottom: 12px;
+}
+
+.timeline-card p {
+  color: #d0c0b0;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 300;
+}
+
+/* Responsive Styles */
+@media (max-width: 968px) {
+  .philosophy-grid {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .philosophy-main-img {
+    height: 320px;
+  }
+  .values-grid,
+  .timeline-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .values-grid,
+  .timeline-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-hero-title {
+    font-size: 36px;
+  }
+  .section-heading-gothic {
+    font-size: 32px;
+  }
+}   

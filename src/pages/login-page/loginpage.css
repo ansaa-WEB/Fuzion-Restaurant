@@ -1,0 +1,273 @@
+.login-page-container {
+  background-color: #1a1410;
+  color: #f5f5f5;
+  min-height: calc(100vh - 80px); /* Navbar height adjust */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+.login-wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  height: 600px;
+  background-color: #241c16;
+  border-radius: 16px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  border: 1px solid #c5a05933;
+}
+
+/* --- Left Side --- */
+.login-left {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, rgba(26, 20, 16, 0.85), rgba(26, 20, 16, 0.95));
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-brand-info {
+  text-align: center;
+}
+
+.login-logo {
+  font-size: 52px;
+  font-weight: 900;
+  color: #c5a059 !important;
+  text-decoration: none;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 15px;
+  font-family: 'Playfair Display', serif;
+}
+
+.login-brand-info h3 {
+  color: #f5f5f5;
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.login-brand-info p {
+  color: #d1c7bc;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* --- Right Side --- */
+.login-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background-color: #241c16;
+}
+
+.login-form-box {
+  width: 100%;
+  max-width: 380px;
+}
+
+.form-box-header {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.form-box-header h2 {
+  color: #c5a059;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.form-box-header p {
+  color: #d1c7bc;
+  font-size: 14px;
+}
+
+/* --- Stylish Inputs --- */
+.stylish-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stylish-input-group {
+  position: relative;
+  width: 100%;
+}
+
+.input-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #c5a05988;
+  font-size: 14px;
+}
+
+.stylish-input-group input {
+  width: 100%;
+  background-color: #1a1410;
+  border: 1px solid #c5a05933;
+  border-radius: 8px;
+  padding: 15px 15px 15px 45px; /* Left padding for icon */
+  color: #f5f5f5;
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.stylish-input-group input:focus {
+  border-color: #c5a059;
+  box-shadow: 0 0 10px rgba(197, 160, 89, 0.15);
+}
+
+.stylish-input-group input::placeholder {
+  color: #7c6e61;
+}
+
+/* --- Options & Button --- */
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #d1c7bc;
+  margin-top: -5px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.remember-me input {
+  accent-color: #c5a059;
+  cursor: pointer;
+}
+
+.forgot-pass {
+  color: #c5a059;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.forgot-pass:hover {
+  color: #d4af37;
+  text-decoration: underline;
+}
+
+.stylish-submit-btn {
+  margin-top: 15px;
+  width: 100%;
+  background-color: #c5a059;
+  color: #1a1410;
+  border: none;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: all 0.4s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.stylish-submit-btn:hover {
+  background-color: #d4af37;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-arrow {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.stylish-submit-btn:hover .btn-arrow {
+  transform: translateX(5px);
+}
+
+/* --- Footer Switch --- */
+.login-switch-footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #d1c7bc;
+}
+
+.login-switch-footer span {
+  color: #c5a059;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.login-switch-footer span:hover {
+  color: #d4af37;
+}
+
+/* --- Responsive: Mobile --- */
+@media (max-width: 768px) {
+  .login-page-container {
+    padding: 0;
+  }
+  
+  .login-wrapper {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0;
+    box-shadow: none;
+    flex-direction: column-reverse; /* Image neeche, form upar */
+  }
+
+  .login-left {
+    height: 200px; /* Chhoti image */
+  }
+
+  .login-overlay {
+    padding: 20px;
+    background: rgba(26, 20, 16, 0.9);
+  }
+  
+  .login-logo {
+    font-size: 36px;
+  }
+
+  .login-right {
+    padding: 40px 20px;
+  }
+
+  .form-box-header {
+    margin-bottom: 30px;
+  }
+}

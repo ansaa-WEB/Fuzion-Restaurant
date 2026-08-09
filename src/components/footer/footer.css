@@ -1,0 +1,111 @@
+/* Import Stylish Luxury Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
+
+.footer-container {
+  background-color: #2c1f18;       /* Deep Espresso Brown (Website theme match) */
+  color: var(--text-muted, #d0c2b6);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  padding: 60px 60px 20px 60px;
+  border-top: 1px solid #594235;   /* Warm Coffee Border */
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #594235;
+}
+
+.footer-logo {
+  color: #c5a059;                    /* Sophisticated Restaurant Gold */
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.footer-desc {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #d0c2b6;
+  max-width: 320px;
+}
+
+.footer-heading {
+  color: #c5a059;
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #d0c2b6;
+  font-size: 13px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #c5a059;
+}
+
+.footer-text {
+  font-size: 13px;
+  color: #d0c2b6;
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 20px auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #ab9b8e;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons a {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #594235;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c5a059;
+  background: rgba(197, 160, 89, 0.05);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #c5a059;
+  color: #2c1f18;
+}
+
+/* Responsive design for Footer */
+@media (max-width: 992px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}
