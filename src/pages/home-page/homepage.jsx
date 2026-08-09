@@ -156,7 +156,7 @@ const Homepage = () => {
         <div className="menu-grid-3">
           <div className="menu-card-light">
             <img 
-              src="public\images\Grilled Chicken.jpg" 
+              src="/images/Grilled Chicken.jpg" 
               alt="Grilled Chicken" 
               className="card-img" 
             />
@@ -184,7 +184,7 @@ const Homepage = () => {
 
           <div className="menu-card-light">
             <img 
-              src="public\images\Classic Burger.jpg" 
+              src="/images/Classic Burger.jpg" 
               alt="Classic Burger" 
               className="card-img" 
             />
