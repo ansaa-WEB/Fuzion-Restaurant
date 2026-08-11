@@ -11,28 +11,28 @@ const Homepage = () => {
 
   const menuCategories = {
     Starters: [
-      { name: 'Garlic Cheese Bread', price: 'Rs. 750', badge: 'Starter', img: '/images/Garlic Cheese Bread.jpg' },
-      { name: 'Crispy Chicken Fingers', price: 'Rs. 990', badge: 'Starter', img: '/images/Crispy Chicken Fingers.jpg' },
-      { name: 'Loaded Nachos with Cheese', price: 'Rs. 1100', badge: 'Starter', img: '/images/Loaded Nachos with Cheese.jpg' },
-      { name: 'Loaded Jalapeño Cheese Fries', price: 'Rs. 890', badge: 'Hot', img: '/images/Loaded Jalapeno Cheese Fries.jpg' }
+      { name: 'Garlic Cheese Bread', price: 'Rs. 350', badge: 'Starter', img: '/images/Garlic Cheese Bread.jpg' },
+      { name: 'Crispy Chicken Fingers', price: 'Rs. 550', badge: 'Starter', img: '/images/Crispy Chicken Fingers.jpg' },
+      { name: 'Loaded Nachos with Cheese', price: 'Rs. 590', badge: 'Starter', img: '/images/Loaded Nachos with Cheese.jpg' },
+      { name: 'Loaded Jalapeño Cheese Fries', price: 'Rs. 450', badge: 'Hot', img: '/images/Loaded Jalapeno Cheese Fries.jpg' }
     ],
     'Main Course': [
-      { name: 'Grilled Steak', price: 'Rs. 2500', badge: 'Chef Choice', img: '/images/Grilled Steak.jpg' },
-      { name: 'Truffle Pasta', price: 'Rs. 2200', badge: 'Popular', img: '/images/Truffle Pasta.jpg' },
-      { name: 'Classic Burger', price: 'Rs. 1500', badge: 'Juicy', img: '/images/Classic-Burger.jpg' },
-      { name: 'Grilled Chicken', price: 'Rs. 1800', badge: 'Spicy', img: '/images/Grilled-Chicken.jpg' }
+      { name: 'Grilled Steak', price: 'Rs. 1250', badge: 'Chef Choice', img: '/images/Grilled Steak.jpg' },
+      { name: 'Truffle Pasta', price: 'Rs. 950', badge: 'Popular', img: '/images/Truffle Pasta.jpg' },
+      { name: 'Classic Burger', price: 'Rs. 580', badge: 'Juicy', img: '/images/Classic-Burger.jpg' },
+      { name: 'Grilled Chicken', price: 'Rs. 850', badge: 'Spicy', img: '/images/Grilled-Chicken.jpg' }
     ],
     Desserts: [
-      { name: 'Chocolate Lava Cake', price: 'Rs. 850', badge: 'Sweet', img: '/images/Chocolate Lava Cake.jpg' },
-      { name: 'Classic Tiramisu', price: 'Rs. 990', badge: 'Classic', img: '/images/Classic Italian Tiramisu.jpg' },
-      { name: 'Cheesecake', price: 'Rs. 890', badge: 'Creamy', img: '/images/Cheesecake.jpg' },
-      { name: 'Brownie', price: 'Rs. 750', badge: 'Hot', img: '/images/Brownie.jpg' }
+      { name: 'Chocolate Lava Cake', price: 'Rs. 450', badge: 'Sweet', img: '/images/Chocolate Lava Cake.jpg' },
+      { name: 'Classic Tiramisu', price: 'Rs. 490', badge: 'Classic', img: '/images/Classic Italian Tiramisu.jpg' },
+      { name: 'Cheesecake', price: 'Rs. 480', badge: 'Creamy', img: '/images/Cheesecake.jpg' },
+      { name: 'Brownie', price: 'Rs. 350', badge: 'Hot', img: '/images/Brownie.jpg' }
     ],
     Beverages: [
-      { name: 'Mint Margarita', price: 'Rs. 450', badge: 'Refreshing', img: '/images/Mint Margarita.jpg' },
-      { name: 'Iced Coffee', price: 'Rs. 550', badge: 'Cold', img: '/images/Iced Coffee.jpg' },
-      { name: 'Pina Colada', price: 'Rs. 600', badge: 'Tropical', img: '/images/Pina Colada.jpg' },
-      { name: 'Lemonade', price: 'Rs. 350', badge: 'Zesty', img: '/images/Lemonade.jpg' }
+      { name: 'Mint Margarita', price: 'Rs. 320', badge: 'Refreshing', img: '/images/Mint Margarita.jpg' },
+      { name: 'Iced Coffee', price: 'Rs. 350', badge: 'Cold', img: '/images/Iced Coffee.jpg' },
+      { name: 'Pina Colada', price: 'Rs. 380', badge: 'Tropical', img: '/images/Pina Colada.jpg' },
+      { name: 'Lemonade', price: 'Rs. 250', badge: 'Zesty', img: '/images/Lemonade.jpg' }
     ]
   };
 
@@ -157,7 +157,7 @@ const Homepage = () => {
           <HomeCard 
             image="/images/Grilled-Chicken.jpg"
             title="Grilled Chicken"
-            price="Rs. 1800"
+            price="Rs. 850"
             description="Tender chicken marinated in fresh herbs and flame-grilled."
             onReadMore={() => navigate('/menu')}
           />
@@ -165,7 +165,7 @@ const Homepage = () => {
           <HomeCard 
             image="/images/img_1608897013039-887f21d8c804.jpg"
             title="Truffle Pasta"
-            price="Rs. 2200"
+            price="Rs. 950"
             description="Hand-cut pasta tossed in a creamy black truffle sauce."
             onReadMore={() => navigate('/menu')}
           />
@@ -173,8 +173,8 @@ const Homepage = () => {
           <HomeCard 
             image="/images/Classic-Burger.jpg"
             title="Classic Burger"
-            price="Rs. 1500"
-            description="Wagyu beef patty, artisanal cheese, on a brioche bun."
+            price="Rs. 580"
+            description="Juicy beef patty, artisanal cheese, on a brioche bun."
             onReadMore={() => navigate('/menu')}
           />
         </div>

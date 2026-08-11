@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
+import { CartProvider, useCart } from './context/CartContext';
 import Navbar from './components/nav-bar/Navbar';
 import Footer from './components/footer/Footer';
 import ScrollToTop from './components/ScrollToTop';
@@ -16,6 +17,7 @@ import ContactPage from './pages/contact-page/contactpage';
 import Reservation from './pages/reservation/reservation';
 import LoginPage from './pages/login-page/loginpage';
 import BlogPostDetail from './pages/blog-page/BlogPostDetail';
+import Cart from './pages/cart/cart';
 import './App.css';
 
 // Page slide & fade transition wrapper component
@@ -30,6 +32,25 @@ const PageWrapper = ({ children }) => {
     >
       {children}
     </motion.div>
+  );
+};
+
+// Smart wrapper component to handle context variants and pass props safely to Cart
+const CartRoute = () => {
+  const cartData = useCart() || {};
+  
+  const items = cartData.cartItems || cartData.cart || cartData.items || [];
+  const updateQty = cartData.updateQuantity || cartData.incrementQuantity || cartData.changeQuantity;
+  const remove = cartData.removeFromCart || cartData.deleteItem;
+  const clear = cartData.clearCart || cartData.emptyCart;
+
+  return (
+    <Cart 
+      cartItems={items} 
+      updateQuantity={updateQty} 
+      removeFromCart={remove} 
+      clearCart={clear} 
+    />
   );
 };
 
@@ -53,6 +74,7 @@ function AnimatedRoutes() {
         <Route path="/reservation" element={<PageWrapper><Reservation /></PageWrapper>} />
         <Route path="/auth" element={<PageWrapper><LoginPage /></PageWrapper>} />
         <Route path="/blog/:id" element={<PageWrapper><BlogPostDetail /></PageWrapper>} />
+        <Route path="/cart" element={<PageWrapper><CartRoute /></PageWrapper>} />
       </Routes>
     </AnimatePresence>
   );
@@ -61,10 +83,12 @@ function AnimatedRoutes() {
 export default function App() {
   return (
     <Router>
-      <ScrollToTop />
-      <Navbar />
-      <AnimatedRoutes />
-      <Footer />
+      <CartProvider>
+        <ScrollToTop />
+        <Navbar />
+        <AnimatedRoutes />
+        <Footer />
+      </CartProvider>
     </Router>
   );
 }
