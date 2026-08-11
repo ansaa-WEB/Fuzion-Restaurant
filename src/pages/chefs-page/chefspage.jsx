@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import ChefCard from '../../components/ChefCard/ChefCard';
 import './chefspage.css';
 
 const chefsData = [
@@ -56,35 +56,20 @@ const chefsData = [
 export default function Chefspage() {
   return (
     <div className="chef-page-container">
-   {/* Hero Section */}
-     <section className="chef-hero-section">
-       <div className="chef-hero-overlay"></div>
-       <div className="chef-hero-content">
-         <span className="chef-breadcrumb">The Experts Behind The Flavors</span>
-         <h1 className="chef-hero-title">Meet Our Culinary Masters</h1>
-       </div>
-     </section>
+      {/* Hero Section */}
+      <section className="chef-hero-section">
+        <div className="chef-hero-overlay"></div>
+        <div className="chef-hero-content">
+          <span className="chef-breadcrumb">The Experts Behind The Flavors</span>
+          <h1 className="chef-hero-title">Meet Our Culinary Masters</h1>
+        </div>
+      </section>
 
-      {/* Chefs Grid Section */}
+      {/* Chefs Grid Section (Using ChefCard Component) */}
       <section className="chef-grid-section">
         <div className="chef-cards-grid">
           {chefsData.map((chef) => (
-            <div className="chef-card" key={chef.id}>
-              <div className="chef-img-wrapper">
-                <img src={chef.img} alt={chef.name} />
-                <div className="chef-social-overlay">
-                  <a href="#facebook" className="social-icon"><FaFacebookF /></a>
-                  <a href="#instagram" className="social-icon"><FaInstagram /></a>
-                  <a href="#linkedin" className="social-icon"><FaLinkedinIn /></a>
-                </div>
-              </div>
-              <div className="chef-info">
-                <h3>{chef.name}</h3>
-                <span className="chef-role">{chef.role}</span>
-                <span className="chef-exp">{chef.experience}</span>
-                <p className="chef-bio">{chef.bio}</p>
-              </div>
-            </div>
+            <ChefCard key={chef.id} chef={chef} />
           ))}
         </div>
       </section>

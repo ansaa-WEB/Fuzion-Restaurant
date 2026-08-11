@@ -1,13 +1,32 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import ValueCard from '../../components/value-card/ValueCard';
+import TimelineCard from '../../components/timeline-card/TimelineCard';
 import './aboutpage.css';
 
 const AboutPage = () => {
     const navigate = useNavigate();
+
+    // Core values data
+    const valuesData = [
+      { icon: '🌿', title: '100% Organic', description: 'Freshly harvested ingredients sourced daily from trusted local sustainable farms.' },
+      { icon: '🔥', title: 'Wood-Fire Craft', description: 'Traditional flame and wood-grilling techniques that lock in rich, smoky flavors.' },
+      { icon: '👨‍🍳', title: 'Master Chefs', description: 'Internationally trained culinary artists bringing passion to every plate.' },
+      { icon: '✨', title: 'Warm Ambiance', description: 'An exquisite atmosphere designed for family dinners and romantic evenings.' }
+    ];
+
+    // Timeline milestones data
+    const timelineData = [
+      { year: '2004', description: 'Opened as a small family kitchen with six tables.' },
+      { year: '2011', description: 'Expanded the dining room, added our signature wood-fire grill.' },
+      { year: '2017', description: "Named one of the city's top dining spots for three years running." },
+      { year: '2024', description: 'Two decades in, still family-run, still slow-cooked.' }
+    ];
+
   return (
     <div className="about-page-container">
       
- {/* 1. About Hero Section */}
+     {/* 1. About Hero Section */}
       <section className="about-hero">
         <div className="about-hero-overlay"></div>
         <div className="about-hero-content">
@@ -17,7 +36,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* 2. Brand Philosophy Section (Redesigned) */}
+      {/* 2. Brand Philosophy Section */}
       <section className="philosophy-section">
         <div className="philosophy-grid">
           <div className="philosophy-text-col">
@@ -46,8 +65,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-
-      {/* 3. Core Values Section */}
+      {/* 3. Core Values Section (Using ValueCard Component) */}
       <section className="about-values-section">
         <div className="values-header">
           <span className="sub-tagline">Our Commitment</span>
@@ -58,33 +76,18 @@ const AboutPage = () => {
         </div>
 
         <div className="values-grid">
-          <div className="value-card">
-            <div className="value-icon">🌿</div>
-            <h3>100% Organic</h3>
-            <p>Freshly harvested ingredients sourced daily from trusted local sustainable farms.</p>
-          </div>
-
-          <div className="value-card">
-            <div className="value-icon">🔥</div>
-            <h3>Wood-Fire Craft</h3>
-            <p>Traditional flame and wood-grilling techniques that lock in rich, smoky flavors.</p>
-          </div>
-
-          <div className="value-card">
-            <div className="value-icon">👨‍🍳</div>
-            <h3>Master Chefs</h3>
-            <p>Internationally trained culinary artists bringing passion to every plate.</p>
-          </div>
-
-          <div className="value-card">
-            <div className="value-icon">✨</div>
-            <h3>Warm Ambiance</h3>
-            <p>An exquisite atmosphere designed for family dinners and romantic evenings.</p>
-          </div>
+          {valuesData.map((item, index) => (
+            <ValueCard 
+              key={index}
+              icon={item.icon}
+              title={item.title}
+              description={item.description}
+            />
+          ))}
         </div>
       </section>
 
-      {/* 4. The Hands Behind It Section (Redesigned) */}
+      {/* 4. The Hands Behind It Section */}
       <section className="hands-behind-section">
         <div className="hands-content-wrapper">
           <div className="hands-badge">
@@ -118,7 +121,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* 5. Our Journey Timeline Section */}
+      {/* 5. Our Journey Timeline Section (Using TimelineCard Component) */}
       <section className="journey-timeline-section">
         <div className="journey-header">
           <span className="sub-tagline">Milestones</span>
@@ -126,26 +129,13 @@ const AboutPage = () => {
         </div>
 
         <div className="timeline-grid">
-          <div className="timeline-card">
-            <div className="timeline-dot"></div>
-            <h3>2004</h3>
-            <p>Opened as a small family kitchen with six tables.</p>
-          </div>
-          <div className="timeline-card">
-            <div className="timeline-dot"></div>
-            <h3>2011</h3>
-            <p>Expanded the dining room, added our signature wood-fire grill.</p>
-          </div>
-          <div className="timeline-card">
-            <div className="timeline-dot"></div>
-            <h3>2017</h3>
-            <p>Named one of the city's top dining spots for three years running.</p>
-          </div>
-          <div className="timeline-card">
-            <div className="timeline-dot"></div>
-            <h3>2024</h3>
-            <p>Two decades in, still family-run, still slow-cooked.</p>
-          </div>
+          {timelineData.map((item, index) => (
+            <TimelineCard 
+              key={index}
+              year={item.year}
+              description={item.description}
+            />
+          ))}
         </div>
       </section>
 

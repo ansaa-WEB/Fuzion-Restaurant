@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import HomeCard from '../../components/hom-card/HomeCard';
 import './homepage.css';
 
 const Homepage = () => {
@@ -8,7 +9,6 @@ const Homepage = () => {
   const [activeTab, setActiveTab] = useState('Starters');
   const [currentReview, setCurrentReview] = useState(0);
 
-  // Categories ka data (Har category ke 4 items)
   const menuCategories = {
     Starters: [
       { name: 'Garlic Cheese Bread', price: 'Rs. 750', badge: 'Starter', img: '/images/Garlic Cheese Bread.jpg' },
@@ -90,7 +90,7 @@ const Homepage = () => {
   return (
     <div className="homepage-container">
       
-     {/* 1. Hero Section with Movement Animation */}
+     {/* 1. Hero Section */}
       <section className="hero-section" id="home">
         <div className="hero-bg-image"></div>
         <div className="hero-overlay"></div>
@@ -146,7 +146,7 @@ const Homepage = () => {
 
       <div className="section-separator"></div>
 
-      {/* 3. Our Menu Section */}
+      {/* 3. Our Menu Section (Using HomeCard Component) */}
       <section className="menu-preview-section" id="menu">
         <div className="menu-header-center">
           <span className="sub-tagline">Carnivore Tasty Offer</span>
@@ -154,47 +154,29 @@ const Homepage = () => {
         </div>
 
         <div className="menu-grid-3">
-          <div className="menu-card-light">
-            <img 
-              src="/images/Grilled-Chicken.jpg" 
-              alt="Grilled Chicken" 
-              className="card-img" 
-            />
-            <div className="card-info">
-              <h3>Grilled Chicken</h3>
-              <span className="card-price">Rs. 1800</span>
-            </div>
-            <p className="card-desc">Tender chicken marinated in fresh herbs and flame-grilled.</p>
-            <button onClick={() => navigate('/menu')} className="card-read-more" style={{background: 'none', border: 'none', borderTop: '1px solid var(--border-light)', width: '100%', cursor: 'pointer'}}>READ MORE</button>
-          </div>
+          <HomeCard 
+            image="/images/Grilled-Chicken.jpg"
+            title="Grilled Chicken"
+            price="Rs. 1800"
+            description="Tender chicken marinated in fresh herbs and flame-grilled."
+            onReadMore={() => navigate('/menu')}
+          />
 
-          <div className="menu-card-light">
-            <img 
-              src="/images/img_1608897013039-887f21d8c804.jpg" 
-              alt="Truffle Pasta" 
-              className="card-img" 
-            />
-            <div className="card-info">
-              <h3>Truffle Pasta</h3>
-              <span className="card-price">Rs. 2200</span>
-            </div>
-            <p className="card-desc">Hand-cut pasta tossed in a creamy black truffle sauce.</p>
-            <button onClick={() => navigate('/menu')} className="card-read-more" style={{background: 'none', border: 'none', borderTop: '1px solid var(--border-light)', width: '100%', cursor: 'pointer'}}>READ MORE</button>
-          </div>
+          <HomeCard 
+            image="/images/img_1608897013039-887f21d8c804.jpg"
+            title="Truffle Pasta"
+            price="Rs. 2200"
+            description="Hand-cut pasta tossed in a creamy black truffle sauce."
+            onReadMore={() => navigate('/menu')}
+          />
 
-          <div className="menu-card-light">
-            <img 
-              src="/images/Classic-Burger.jpg" 
-              alt="Classic Burger" 
-              className="card-img" 
-            />
-            <div className="card-info">
-              <h3>Classic Burger</h3>
-              <span className="card-price">Rs. 1500</span>
-            </div>
-            <p className="card-desc">Wagyu beef patty, artisanal cheese, on a brioche bun.</p>
-            <button onClick={() => navigate('/menu')} className="card-read-more" style={{background: 'none', border: 'none', borderTop: '1px solid var(--border-light)', width: '100%', cursor: 'pointer'}}>READ MORE</button>
-          </div>
+          <HomeCard 
+            image="/images/Classic-Burger.jpg"
+            title="Classic Burger"
+            price="Rs. 1500"
+            description="Wagyu beef patty, artisanal cheese, on a brioche bun."
+            onReadMore={() => navigate('/menu')}
+          />
         </div>
       </section>
 
@@ -309,7 +291,7 @@ const Homepage = () => {
 
       <div className="section-separator"></div>
 
-      {/* 6. Customer Reviews Section with Bottom Center Arrows */}
+      {/* 6. Customer Reviews Section  */}
       <section className="reviews-section">
         <h2 className="section-heading-gothic center">Customer Reviews</h2>
         <div className="review-card-box" style={{ textAlign: 'center' }}>

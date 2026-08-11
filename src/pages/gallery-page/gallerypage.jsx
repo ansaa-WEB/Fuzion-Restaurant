@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import GalleryCard from '../../components/gallery-card/GalleryCard';
 import './gallerypage.css';
 
 const galleryData = [
@@ -29,7 +30,7 @@ export default function GalleryPage() {
 
   return (
     <div className="gallery-page-container">
-     {/* Hero Section */}
+      {/* Hero Section */}
       <section className="gallery-hero-section">
         <div className="gallery-hero-overlay"></div>
         <div className="gallery-hero-content">
@@ -52,15 +53,7 @@ export default function GalleryPage() {
       <section className="gallery-grid-section">
         <div className="gallery-cards-grid">
           {filteredItems.map((item) => (
-            <div className="gallery-card" key={item.id}>
-              <div className="gallery-img-wrapper">
-                <img src={item.img} alt={item.title} />
-              </div>
-              <div className="gallery-card-content">
-                <span className="gallery-category-tag">{item.category}</span>
-                <h3 className="gallery-card-title">{item.title}</h3>
-              </div>
-            </div>
+            <GalleryCard key={item.id} item={item} />
           ))}
         </div>
       </section>

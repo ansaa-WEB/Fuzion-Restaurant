@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import BlogCard from '../../components/BlogCard/BlogCard';
 import './blogpage.css';
 
 const allBlogPosts = [
@@ -16,7 +17,7 @@ const allBlogPosts = [
     ]
   },
   {
- id: 2,
+    id: 2,
     title: 'Crafting the Ultimate Juicy Burger at Home',
     category: 'Kitchen Secrets',
     date: 'August 9, 2026',
@@ -123,45 +124,14 @@ export default function BlogPage() {
           ))}
         </div>
 
-        {/* Blog Grid */}
+        {/* Blog Grid (Using BlogCard Component) */}
         <div className="blog-grid">
           {filteredPosts.map((post) => (
-            <div className="blog-card" key={post.id}>
-              {/* Card Header Content */}
-              <div className="blog-card-content">
-                <div className="blog-header-row">
-                  <span className="blog-date">{post.date}</span>
-                  <span className="blog-category-badge">{post.category}</span>
-                </div>
-                <h3 className="blog-title">{post.title}</h3>
-                <p className="blog-excerpt">{post.excerpt}</p>
-              </div>
-
-              {/* Magazine Style Layout: 1 Big Main Image + 2 Side-by-Side Sub Images */}
-              <div className="blog-magazine-gallery">
-                <div className="blog-main-img-box">
-                  <img src={post.images[0]} alt={`${post.title} Main`} />
-                </div>
-                <div className="blog-sub-imgs-row">
-                  <div className="blog-sub-img-box">
-                    <img src={post.images[1]} alt={`${post.title} 2`} />
-                  </div>
-                  <div className="blog-sub-img-box">
-                    <img src={post.images[2]} alt={`${post.title} 3`} />
-                  </div>
-                </div>
-              </div>
-
-              <div className="blog-footer-action">
-                {/* Yahan onClick function add kar diya hai jo user ko blog detail page par le jaye ga */}
-                <button 
-                  className="blog-read-btn" 
-                  onClick={() => navigate(`/blog/${post.id}`)}
-                >
-                  Read Full Article →
-                </button>
-              </div>
-            </div>
+            <BlogCard 
+              key={post.id} 
+              post={post} 
+              onReadMore={() => navigate(`/blog/${post.id}`)} 
+            />
           ))}
         </div>
 

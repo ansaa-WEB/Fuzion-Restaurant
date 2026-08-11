@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import MenuItemCard from '../../components/menu-item-card/MenuItemCard';
 import './menupage.css';
 
 const menuItemsData = [
@@ -10,7 +11,7 @@ const menuItemsData = [
   { id: 5, title: 'Fresh House Salad', category: 'Starters', price: '500', calories: '180 cal', tag: '', img: '/images/Fresh House Salad.jpg' },
   { id: 6, title: 'Masala Fries', category: 'Starters', price: '450', calories: '350 cal', tag: '', img: '/images/Masala Fries.jpg' },
 
-  // Main Course (Pakistani Fast Food & Desi Dishes)
+  // Main Course 
   { id: 7, title: 'Special Chicken Biryani', category: 'Main Course', price: '850', calories: '550 cal', tag: 'CHEF\'S PICK', img: '/images/Special Chicken Biryan.jpg' },
   { id: 8, title: 'Chicken Shinwari Karahi', category: 'Main Course', price: '1350', calories: '620 cal', tag: 'CHEF\'S PICK', img: '/images/Chicken Shinwari Karahi.jpg' },
   { id: 9, title: 'Zinger Burger with Fries', category: 'Main Course', price: '800', calories: '650 cal', tag: '', img: '/images/Zinger Burger with Fries.jpg' },
@@ -43,7 +44,7 @@ export default function MenuPage() {
 
   return (
     <div className="menu-page-container">
-   {/* Hero Section */}
+      {/* Hero Section */}
       <section className="menu-hero-section">
         <div className="menu-hero-overlay"></div>
         <div className="menu-hero-content">
@@ -71,19 +72,7 @@ export default function MenuPage() {
       <section className="menu-grid-section">
         <div className="menu-cards-grid">
           {filteredItems.map((item) => (
-            <div className="menu-item-card" key={item.id}>
-              {item.tag && <span className="menu-tag">{item.tag}</span>}
-              <div className="menu-img-wrapper">
-                <img src={item.img} alt={item.title} />
-              </div>
-              <div className="menu-item-details">
-                <div className="menu-item-info">
-                  <h3>{item.title}</h3>
-                  <span className="menu-category-sub">{item.category} - {item.calories}</span>
-                </div>
-                <div className="menu-item-price">Rs. {item.price}</div>
-              </div>
-            </div>
+            <MenuItemCard key={item.id} item={item} />
           ))}
         </div>
       </section>

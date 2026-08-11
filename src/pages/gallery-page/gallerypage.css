@@ -82,7 +82,7 @@
   gap: 30px;
 }
 
-/* Unique Shapes for Each Card Style */
+
 .gallery-card {
   background-color: #241c16;
   border: 1px solid #c5a05933;
@@ -90,17 +90,17 @@
   transition: all 0.4s ease;
 }
 
-/* Har card ko mukhtalif aur pyari shape dene ke liye */
+
 .gallery-card:nth-child(odd) {
-  border-radius: 20px 4px 20px 4px; /* Stylish diagonal curve */
+  border-radius: 20px 4px 20px 4px; 
 }
 
 .gallery-card:nth-child(even) {
-  border-radius: 4px 20px 4px 20px; /* Opposite curve */
+  border-radius: 4px 20px 4px 20px; 
 }
 
 .gallery-card:nth-child(3n) {
-  border-radius: 16px; /* Smooth all rounded corners */
+  border-radius: 16px; 
 }
 
 .gallery-card:hover {

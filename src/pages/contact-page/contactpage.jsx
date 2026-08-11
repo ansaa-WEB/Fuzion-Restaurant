@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ContactInfoCard from '../../components/ContactInfoCard/ContactInfoCard';
 import './contactpage.css';
 
 export default function ContactPage() {
@@ -11,6 +12,14 @@ export default function ContactPage() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+
+  // Contact info data array
+  const contactInfoData = [
+    { icon: '📍', title: 'Our Location', content: '123 Luxury Avenue, Gourmet Street, City' },
+    { icon: '📞', title: 'Phone Number', content: <>;+92 300 1234567<br />+92 51 9876543</> },
+    { icon: '✉️', title: 'Email Address', content: <>support@fuzionrestaurant.com<br />info@fuzion.com</> },
+    { icon: '⏰', title: 'Working Hours', content: 'Mon - Sun: 12:00 PM - 11:30 PM' }
+  ];
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -31,7 +40,6 @@ export default function ContactPage() {
       <section className="contact-hero-section">
         <div className="contact-hero-overlay"></div>
         <div className="contact-hero-content">
-          {/* Yahan Home / Contact Us ki jagah naya stylish tag laga diya hai */}
           <span className="contact-breadcrumb">We'd Love To Hear From You</span>
           <h1 className="contact-hero-title">Get In Touch</h1>
           <p className="contact-hero-subtitle">Reach out for reservations, queries, or feedback anytime.</p>
@@ -42,7 +50,7 @@ export default function ContactPage() {
       <section className="contact-content-section">
         <div className="contact-grid-wrapper">
           
-          {/* Left Side: Contact Information Cards */}
+          {/* Left Side: Contact Information Cards (Using ContactInfoCard Component) */}
           <div className="contact-info-side">
             <h2>Let's Start a Conversation</h2>
             <p className="contact-info-desc">
@@ -50,37 +58,14 @@ export default function ContactPage() {
             </p>
 
             <div className="contact-cards-grid">
-              <div className="contact-info-card">
-                <div className="contact-icon-box">📍</div>
-                <div>
-                  <h3>Our Location</h3>
-                  <p>123 Luxury Avenue, Gourmet Street, City</p>
-                </div>
-              </div>
-
-              <div className="contact-info-card">
-                <div className="contact-icon-box">📞</div>
-                <div>
-                  <h3>Phone Number</h3>
-                  <p>+92 300 1234567<br />+92 51 9876543</p>
-                </div>
-              </div>
-
-              <div className="contact-info-card">
-                <div className="contact-icon-box">✉️</div>
-                <div>
-                  <h3>Email Address</h3>
-                  <p>support@fuzionrestaurant.com<br />info@fuzion.com</p>
-                </div>
-              </div>
-
-              <div className="contact-info-card">
-                <div className="contact-icon-box">⏰</div>
-                <div>
-                  <h3>Working Hours</h3>
-                  <p>Mon - Sun: 12:00 PM - 11:30 PM</p>
-                </div>
-              </div>
+              {contactInfoData.map((item, index) => (
+                <ContactInfoCard 
+                  key={index}
+                  icon={item.icon}
+                  title={item.title}
+                  content={item.content}
+                />
+              ))}
             </div>
           </div>
 

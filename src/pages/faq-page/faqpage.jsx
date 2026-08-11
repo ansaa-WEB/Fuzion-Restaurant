@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import FaqItem from '../../components/FaqItem/FaqItem';
 import './faqpage.css';
 
 const faqData = [
@@ -113,7 +114,6 @@ export default function FaqPage() {
       <section className="faq-hero-section">
         <div className="faq-hero-overlay"></div>
         <div className="faq-hero-content">
-          {/* Yahan Home / FAQ ki jagah naya tag laga diya hai */}
           <span className="faq-breadcrumb">Got Questions? We Have Answers</span>
           <h1 className="faq-hero-title">Frequently Asked Questions</h1>
           <p className="faq-hero-subtitle">Find quick answers about our dining experience, menu items, and services.</p>
@@ -142,24 +142,13 @@ export default function FaqPage() {
         <div className="faq-grid-container">
           {filteredFaqs.length > 0 ? (
             filteredFaqs.map((item, index) => (
-              <div 
-                className={`faq-card-item ${activeIndex === index ? 'active' : ''}`} 
+              <FaqItem 
                 key={index}
-              >
-                <button 
-                  className="faq-question-btn" 
-                  onClick={() => toggleAccordion(index)}
-                >
-                  <div className="faq-q-left">
-                    <span className="faq-badge">{item.category}</span>
-                    <span className="faq-question-text">{item.question}</span>
-                  </div>
-                  <span className="faq-icon">{activeIndex === index ? '−' : '+'}</span>
-                </button>
-                <div className="faq-answer-container" style={{ maxHeight: activeIndex === index ? '220px' : '0px' }}>
-                  <p className="faq-answer">{item.answer}</p>
-                </div>
-              </div>
+                item={item}
+                index={index}
+                activeIndex={activeIndex}
+                toggleAccordion={toggleAccordion}
+              />
             ))
           ) : (
             <div className="faq-no-results">

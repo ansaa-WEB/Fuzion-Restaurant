@@ -9,15 +9,15 @@ export default function LoginPage() {
   const [isLogin, setIsLogin] = useState(true);
   const navigate = useNavigate();
 
-  // Form submit handler (Aap yahan apni authentication logic ya navigation laga sakte hain)
+  // Form submit handler 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (isLogin) {
       alert("Successfully Signed In!");
-      navigate('/'); // Login ke baad home page par redirect karne ke liye
+      navigate('/'); 
     } else {
       alert("Account Created Successfully!");
-      setIsLogin(true); // Register hone ke baad login form par le aaye
+      setIsLogin(true); 
     }
   };
 

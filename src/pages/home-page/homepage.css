@@ -18,7 +18,7 @@
   overflow-x: hidden;
 }
 
-/* Stylish Serif Heading style using Playfair Display */
+
 .section-heading-gothic,
 .hero-title,
 .footer-logo,
@@ -72,7 +72,7 @@
   overflow-x: hidden;
 }
 
-/* Stylish Serif Heading style using Playfair Display */
+
 .section-heading-gothic,
 .hero-title,
 .footer-logo,
@@ -127,7 +127,7 @@
     transform: scale(1);
   }
   100% {
-    transform: scale(1.2); /* Scale 1.2 ya 1.25 kar dein taake zoom saaf dikhe */
+    transform: scale(1.2); 
   }
 }
 
@@ -162,10 +162,10 @@
 
 .hero-subtitle {
   display: inline-block !important;
-  color: #fce38a !important; /* Bright elegant gold */
-  font-size: 18px !important; /* Font size bara kar diya hai */
+  color: #fce38a !important; 
+  font-size: 18px !important; 
   text-transform: uppercase !important;
-  letter-spacing: 8px !important; /* Modern wide tracking */
+  letter-spacing: 8px !important; 
   margin-bottom: 20px !important;
   font-weight: 700 !important;
   font-family: 'Playfair Display', serif !important;
@@ -177,14 +177,14 @@
   text-shadow: 0 3px 12px rgba(0, 0, 0, 0.95), 0 0 20px rgba(212, 175, 55, 0.4) !important;
 }
 
-/* Modern stylish side lines jo text ke sath balanced lagengi */
+
 .hero-subtitle::before,
 .hero-subtitle::after {
   content: '' !important;
   position: absolute !important;
   top: 50% !important;
-  width: 50px !important; /* Lines ki length barha di hai */
-  height: 2px !important; /* Thora bold kiya hai */
+  width: 50px !important; 
+  height: 2px !important; 
   background: linear-gradient(90deg, transparent, #d4af37, transparent) !important;
 }
 
@@ -251,9 +251,7 @@
 
 
 
-
-
-/* --- Modernized Our Story Section --- */
+/* --- Our Story Section --- */
 .story-section {
   display: flex;
   align-items: center;
@@ -1063,7 +1061,7 @@
   transform: translateY(-2px);
 }
 
-/* --- Modernized Our Story Section --- */
+/* --- Our Story Section --- */
 .story-section {
   display: flex;
   align-items: center;
@@ -1076,7 +1074,7 @@
   box-sizing: border-box;
 }
 
-/* Background subtle glow effect for modernization */
+
 .story-section::before {
   content: '';
   position: absolute;
@@ -1092,10 +1090,10 @@
 
 .story-image-box {
   position: relative;
-  flex: 1.2; /* Picture ka size mazeed bara aur prominent kar diya hai */
+  flex: 1.2; 
 }
 
-/* Bigger, bolder image with modern multi-layered border frame */
+
 .story-img {
   width: 100%;
   max-width: 600px;
@@ -1246,7 +1244,7 @@
 /* 2.5. Stats Highlight Section (Solid Background without Image) */
 .stats-highlight-section {
   padding: 60px 40px;
-  background-color: var(--bg-light); /* Solid background color jo baqi theme ke sath match kare */
+  background-color: var(--bg-light); 
   border-top: 1px solid var(--border-light);
   border-bottom: 1px solid var(--border-light);
   width: 100%;
@@ -1296,7 +1294,7 @@
 }
 
 
-/* 3. Our Menu Preview Section with Background Image */
+/* 3. Our Menu Preview Section */
 .menu-preview-section {
   padding: 110px 50px;
   background: linear-gradient(rgba(30, 20, 15, 0.9), rgba(30, 20, 15, 0.9)), 
@@ -1401,7 +1399,7 @@
 }
 
 
-/* 4. Why People Choose Us Section with Background Image */
+/* 4. Why People Choose Us Section  */
 .why-choose-section {
   padding: 100px 50px;
   background: linear-gradient(rgba(30, 20, 15, 0.88), rgba(30, 20, 15, 0.88)), 
@@ -1487,7 +1485,7 @@
   overflow: hidden;
 }
 
-/* Decorative Gold Top Border Bar on Hover */
+
 .feature-item::before {
   content: '';
   position: absolute;
@@ -1716,7 +1714,7 @@
 
 
 
-/* 6. Customer Reviews Section with Background Image */
+/* 6. Customer Reviews Section */
 .reviews-section {
   padding: 100px 50px;
   background: linear-gradient(rgba(30, 20, 15, 0.88), rgba(30, 20, 15, 0.88)), 
@@ -1729,7 +1727,7 @@
   text-align: center;
 }
 
-/* Customer Review Card Box Width Reduction */
+/* Customer Review Card Box  */
 .review-card-box {
   background: rgba(70, 52, 43, 0.85);
   backdrop-filter: blur(10px);

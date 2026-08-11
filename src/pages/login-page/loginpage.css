@@ -1,7 +1,7 @@
 .login-page-container {
   background-color: #1a1410;
   color: #f5f5f5;
-  min-height: calc(100vh - 80px); /* Navbar height adjust */
+  min-height: calc(100vh - 80px); 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -130,7 +130,7 @@
   background-color: #1a1410;
   border: 1px solid #c5a05933;
   border-radius: 8px;
-  padding: 15px 15px 15px 45px; /* Left padding for icon */
+  padding: 15px 15px 15px 45px; 
   color: #f5f5f5;
   font-size: 15px;
   font-family: inherit;
@@ -247,11 +247,11 @@
     height: auto;
     border-radius: 0;
     box-shadow: none;
-    flex-direction: column-reverse; /* Image neeche, form upar */
+    flex-direction: column-reverse; 
   }
 
   .login-left {
-    height: 200px; /* Chhoti image */
+    height: 200px;
   }
 
   .login-overlay {
